@@ -66,7 +66,7 @@ public class ToyPlatformer : MonoBehaviour
 
     void VerticalMovement()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        if (Input.GetTouch(0).phase == TouchPhase.Began && onGround)
         {
             Debug.Log("hit");
             jump = true;
